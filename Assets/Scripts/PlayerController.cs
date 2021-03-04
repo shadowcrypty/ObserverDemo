@@ -64,7 +64,7 @@ public class PlayerController : MonoBehaviour
 
     #region Projectile Management
 
-    public void EnableProjectile()
+    private void EnableProjectile()
     {
         projectileEnabled = true;
         availableBullet.SetActive(projectileEnabled);
@@ -78,16 +78,22 @@ public class PlayerController : MonoBehaviour
 
     private void FireProjectile()
     {
-        Vector2 spawnPosition = availableBullet.transform.position;
+        if (projectileEnabled)
+        {
+            Vector2 spawnPosition = availableBullet.transform.position;
 
-        ProjectileController projectile =
-            Instantiate(projectilePrefab, spawnPosition, Quaternion.AngleAxis(90, Vector3.forward));
+            ProjectileController projectile =
+                Instantiate(projectilePrefab, spawnPosition, Quaternion.AngleAxis(90, Vector3.forward));
 
-       projectile.gameObject.GetComponent<SpriteRenderer>().color = Color.green;
-        projectile.gameObject.layer = LayerMask.NameToLayer("PlayerProjectile");
-        projectile.isPlayers = true;
-        projectile.projectileSpeed = 4;
-        projectile.projectileDirection = Vector2.up;
+            projectile.gameObject.GetComponent<SpriteRenderer>().color = Color.green;
+            projectile.gameObject.layer = LayerMask.NameToLayer("PlayerProjectile");
+            projectile.isPlayers = true;
+            projectile.projectileSpeed = 4;
+            projectile.projectileDirection = Vector2.up;
+            projectile.ProjectileOutOfBounds += EnableProjectile;
+            DisableProjectile();
+        }
+        
     }
 
     #endregion
