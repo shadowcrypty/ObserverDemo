@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     [HideInInspector] public float shieldDuration;
     [HideInInspector] public float speed;
 
+    private GameSceneController _gameSceneController;
     private bool projectileEnabled = true;
     private WaitForSeconds shieldTimeOut;
     
@@ -22,8 +23,15 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        _gameSceneController = FindObjectOfType<GameSceneController>();
+        _gameSceneController.UpdateToKill += _gameSceneController_UpdateToKill;
         shieldTimeOut = new WaitForSeconds(shieldDuration);
         EnableShield();
+    }
+
+    private void _gameSceneController_UpdateToKill(int pointValue)
+    {
+        EnableProjectile();
     }
 
     #endregion
