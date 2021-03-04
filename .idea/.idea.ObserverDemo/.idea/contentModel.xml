@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/Library/Caches/Rider2019.1/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.1/resharper-host/local/Transient/ReSharperHost/v191/SolutionCaches/_ObserverDemo.-56425931.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Scripts" t="Include">
+          <e p="BackgroundColor.cs" t="Include" />
+          <e p="EnemyController.cs" t="Include" />
+          <e p="ExplosionController.cs" t="Include" />
+          <e p="GameSceneController.cs" t="Include" />
+          <e p="LevelDefinition.cs" t="Include" />
+          <e p="PlayerController.cs" t="Include" />
+          <e p="PowerupController.cs" t="Include" />
+          <e p="ProjectileController.cs" t="Include" />
+          <e p="ScreenBounds.cs" t="Include" />
+          <e p="ShieldController.cs" t="Include" />
+          <e p="Stars.cs" t="Include" />
+          <e p="UI" t="Include">
+            <e p="HUDController.cs" t="Include" />
+            <e p="StatusText.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="ObserverDemo.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Temp/bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
