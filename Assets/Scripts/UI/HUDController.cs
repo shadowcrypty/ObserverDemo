@@ -17,8 +17,19 @@ public class HUDController : MonoBehaviour
     private Image[] shipImages;
 
     #endregion
-
+    private GameSceneController gameSceneController;
     #region Startup
+
+    private void Start()
+    {
+        gameSceneController = FindObjectOfType<GameSceneController>();
+        gameSceneController.UpdateToKill += GameSceneController_UpdateToKill;
+    }
+
+    private void GameSceneController_UpdateToKill(int pointValue)
+    {
+        UpdateScore(pointValue);
+    }
 
     private void Awake()
     {
