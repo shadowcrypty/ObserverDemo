@@ -66,7 +66,7 @@ public class EnemyController : MonoBehaviour
     {
         Destroy(collision.gameObject);
 
-        FindObjectOfType<PlayerController>().EnableProjectile();
+        //FindObjectOfType<PlayerController>().EnableProjectile();
         FindObjectOfType<HUDController>().UpdateScore(pointValue);
         
         GameObject xPlosion = Instantiate(explosion, transform.position, Quaternion.identity);
